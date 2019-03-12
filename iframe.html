@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Premium Hustler</title>
+
+  <style>
+  /* slideshow publication*/
+.slideshow img { display: none; cursor: pointer;
+}
+
+img {
+  height: 800px;
+}
+
+  </style>
+  </head>
+
+  <body>
+
+<!--slideshow publication-->
+    <div class="slideshow">
+        <div class="controls">
+            <a class="prev" href="javascript:void(0);"></a>
+            <a class="next" href="javascript:void(0);"></a>
+        </div>
+        <div class="slides">
+            <img src="pub1.jpg"/>
+            <img src="pub2.jpg"/>
+            <img src="pub3.png"/>
+            <img src="pub4.png"/>
+            <img src="pub5.png"/>
+            <img src="pub6.png"/>
+            <img src="pub7.png"/>
+            <img src="pub8.png"/>
+            <img src="pub9.png"/>
+            <img src="pub10.png"/>
+            <img src="pub11.png"/>
+            <img src="pub12.png"/>
+            <img src="pub13.png"/>
+            <img src="pub14.png"/>
+            <img src="pub15.png"/>
+            <img src="pub16.png"/>
+            <img src="pub17.png"/>
+            <img src="pub18.png"/>
+            <img src="pub19.png"/>
+            <img src="pub20.png"/>
+            <img src="pub21.png"/>
+            <img src="pub22.png"/>
+            <img src="pub23.png"/>
+            <img src="pub24.png"/>
+            <img src="pub25.png"/>
+            <img src="pub26.png"/>
+            <img src="pub27.png"/>
+            <img src="pub28.png"/>
+            <img src="pub29.png"/>
+            <img src="pub30.png"/>
+            <img src="pub31.png"/>
+            <img src="pub32.png"/>
+            <img src="pub33.png"/>
+            <img src="pub34.png"/>
+    
+
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+      <script>
+    $('a.prev').click(function() {
+        prevSlide($(this).parents('.slideshow').find('.slides'));
+    });
+    //clicking image goes to next slide
+    $('a.next, .slideshow img').click(function() {
+        nextSlide($(this).parents('.slideshow').find('.slides'));
+    });
+
+    //initialize show
+    iniShow();
+
+    function iniShow() {
+        //show first image
+        $('.slideshow').each(function() {
+            $(this).find('img:first').fadeIn(0);
+        })
+    }
+
+    function prevSlide($slides) {
+        $slides.find('img:last').prependTo($slides);
+        showSlide($slides);
+    }
+
+    function nextSlide($slides) {
+        $slides.find('img:first').appendTo($slides);
+        showSlide($slides);
+    }
+
+    function showSlide($slides) {
+        //hide (reset) all slides
+        $slides.find('img').hide();
+        //fade in next slide
+        $slides.find('img:first').fadeIn(0);
+    }
+
+  </script>
+
+  </body>
+</html>
