@@ -1,0 +1,154 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* video background */
+.video-background {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  z-index: -1;
+}
+
+@@media (min-aspect-ratio:16/9) {
+  .video-background {
+    width: 100%;
+    height: auto;
+  }
+}
+@@media (max-aspect-ratio:16/9) {
+  .video-background {
+    width: auto;
+    height: 100%;
+  }
+}
+
+
+/* logo */
+.logo {
+  position: fixed;
+  margin: 20px;
+  height: 180px;
+  z-index: 0;
+}
+
+x-model {
+    animation: 5s spin linear infinite;
+  }
+
+  @keyframes spin {
+    to {
+      transform: rotateY(1turn);
+    }
+  }
+
+/* iframe publication */
+#publication {
+  position: absolute;
+  height: 400px;
+  width: 1000px;
+  top: 0%;
+  left: 20%;
+  margin-left: 200px;
+  margin-top: 170px;
+  text-align: center;
+  z-index: 11;
+}
+
+
+
+/* iframe publication button*/
+button {
+    display: inline-block;
+    height: 110px;
+    vertical-align: bottom;
+    width: auto;
+    background-color: transparent;
+    background-repeat: no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;
+    outline: none;
+    vertical-align: middle;
+    max-height: 90px;
+    max-width: 90px;
+}
+
+#pause img {
+    height: 45px;
+}
+
+.container {
+   position: relative;
+}
+
+.frame-pause {
+  height: 90px;
+  line-height: 90px;
+  width: 130px;
+  border: 1px solid transparent;
+
+  text-align: center;
+  margin: 1em 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+
+/* categories */
+.align-right {
+    margin-top: 0px;
+    float: right;
+}
+
+.frame {
+    height: 100px;
+    line-height: 100px;
+    width: 130px;
+    border: 1px solid transparent;
+
+    text-align: center;
+    margin: 15px 0;
+}
+
+.btn img {
+    background: none;
+    vertical-align: middle;
+    max-height: 80px;
+    max-width: 80px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 10000; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: none; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0); /* Black w/ opacity */
+}
+
+.modal-content img  {
+  filter: none;
+  margin: auto;
+  display: block;
+  position: relative;
+}
+
+
+/* The Close Button */
+.close {
+  color: rgb(210, 210, 210);
+  float: right;
+  font-size: 0px;
+}
